@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   Card, CardContent, CardMedia, Typography, CardActionArea, Container, Grid,
 } from '@material-ui/core';
+import { formatMoney } from '../../../Utilities/formatMoney';
 
 const useStyles = makeStyles({
   root: {
@@ -34,7 +35,6 @@ const useStyles = makeStyles({
     textAlign: 'justify',
   },
   label: {
-    width: '52px',
     height: '20px',
     background: '#1F61F7',
     borderRadius: '4px',
@@ -53,6 +53,9 @@ const useStyles = makeStyles({
 
 const InsuranceCard = ({ data }) => {
   const classes = useStyles();
+  const {
+    image, name, price, description,
+  } = data;
   return (
 
     <Container>
@@ -67,20 +70,20 @@ const InsuranceCard = ({ data }) => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image={data.image}
-                title={data.name}
-                alt={data.name}
+                image={image}
+                title={name}
+                alt={name}
               >
                 <Typography gutterBottom variant="span" component="label" className={classes.label}>
-                  {data.price}
+                  {`$${formatMoney({ amount: price })}`}
                 </Typography>
               </CardMedia>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="p" className={classes.titulo}>
-                  {data.name}
+                  {name}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.parrafo}>
-                  {data.description}
+                  {description}
                 </Typography>
               </CardContent>
             </CardActionArea>
