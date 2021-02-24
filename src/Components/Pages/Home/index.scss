@@ -1,0 +1,42 @@
+main {
+  height: 100%;
+  label {
+    top: -5px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #AFBACC;
+    &.Mui {
+      &-focused {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #1F61F7;
+        z-index: 1;
+      }
+    }
+    .MuiInputLabel-outlined {
+      &.MuiInputLabel-shrink {
+        font-size: 12px;
+      }
+    }
+  }
+  select {
+    min-width: 245px !important;
+    background: #FFFFFF;
+    border: 1px solid #DDE3ED;
+    box-sizing: border-box;
+    border-radius: 4px;
+    &.Mui {
+      &-focused {
+        background: #FFFFFF;
+        border: 2px solid #1F61F7;
+        box-sizing: border-box;
+        border-radius: 4px;
+        z-index: 0;
+      }
+    }
+  }
+}
