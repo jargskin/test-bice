@@ -6,13 +6,15 @@ Tecnologias y complementos utilizados:
   - Sweetalert
   - React-loading
   - Axios
+  - Eslint
 
-### `npm start`
+### `Levantar el Proyecto`
 
 Para levantar el proyecto recuerda seguir los siguientes pasos:
 
   - git clone [url del repositorio]
   - npm install
+  - npm start
 
 Esto desplegará en la siguiente ruta:
 
