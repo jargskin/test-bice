@@ -1,13 +1,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { Suspense } from 'react';
+import './App.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from './Components/Config/Routes/routes';
+import Header from './Components/Commons/Header/index';
+import Footer from './Components/Commons/Footer/index';
 
 function App() {
   return (
     <Router>
       <>
+        <Header />
         <Suspense fallback={<div> </div>}>
           <Switch>
             {routes.map((route, key) => (
@@ -16,6 +20,7 @@ function App() {
             ))}
           </Switch>
         </Suspense>
+        <Footer />
       </>
     </Router>
 
